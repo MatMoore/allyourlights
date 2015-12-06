@@ -44,7 +44,7 @@ class Client(object):
         Turn off a light
         """
         ident = 'R{}D{}'.format(room, device)
-        command = '001,!' + ident + 'F1|1337|On'
+        command = ident + 'F1|1337|On'
         self.send(command)
         return self.recv()
 
